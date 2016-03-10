@@ -15,8 +15,8 @@ A [MOST Web Framework](https://github.com/kbarbounakis/most-web) OMS demo applic
     cd most-web-admin-demo
     npm install
 
-Note: This demo application uses [node-html-pdf](https://github.com/marcbachmann/node-html-pdf) for generating pdf files for invoices. This module which has a dependency on [phantomjs](https://github.com/ariya/phantomjs)
-You may need to install []phantomjs](https://github.com/ariya/phantomjs) first before use this feature.
+Note: This demo application uses [node-html-pdf](https://github.com/marcbachmann/node-html-pdf) for generating pdf files for invoices. This module has a dependency on [phantomjs](https://github.com/ariya/phantomjs)
+You may need to install [phantomjs](https://github.com/ariya/phantomjs) first before use this feature.
 
 ##### Install bower components
 
