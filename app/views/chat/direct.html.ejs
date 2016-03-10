@@ -1,0 +1,45 @@
+<!-- DIRECT CHAT -->
+<div class="box box-warning direct-chat direct-chat-warning" ng-controller="ChatController as ctrl">
+    <div class="box-header with-border">
+        <h3 class="box-title">Direct Chat</h3>
+        <div class="box-tools pull-right">
+            <span ng-if="ctrl.comments.length" data-toggle="tooltip" title="{{ ctrl.comments.length || 0 }} New Messages" class="badge bg-yellow">{{ ctrl.comments.length}}</span>
+            <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+            <button class="btn btn-box-tool" data-toggle="tooltip" title="Contacts" data-widget="chat-pane-toggle"><i class="fa fa-comments"></i></button>
+            <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+        </div>
+    </div><!-- /.box-header -->
+    <div class="box-body">
+        <most-data data-model="UserComment"
+                   data-order="commentTime desc"
+                   data-top="6"
+                   data-expand="commentBy"
+                   data-name="ctrl.comments"></most-data>
+        <!-- Conversations are loaded here -->
+        <div class="direct-chat-messages" ng-if="ctrl.comments">
+            <!-- Message. Default to the left -->
+            <div class="direct-chat-msg" ng-repeat="comment in ctrl.comments">
+                <div class="direct-chat-info clearfix">
+                    <span class="direct-chat-name pull-left">{{comment.commentBy.description}}</span>
+                    <span class="direct-chat-timestamp pull-right">{{comment.commentTime | moment : 'DD MMM HH:mm'}}</span>
+                </div><!-- /.direct-chat-info -->
+                <img class="direct-chat-img" src="{{comment.commentBy.image}}" alt="{{comment.commentBy.description}}"><!-- /.direct-chat-img -->
+                <div class="direct-chat-text">
+                    {{comment.commentText}}
+                </div><!-- /.direct-chat-text -->
+            </div><!-- /.direct-chat-msg -->
+
+        </div><!--/.direct-chat-messages-->
+
+    </div><!-- /.box-body -->
+    <div class="box-footer">
+        <form>
+            <div class="input-group">
+                <input type="text" ng-model="ctrl.commentText" name="message" placeholder="Type Message ..." class="form-control">
+                  <span class="input-group-btn">
+                    <button ng-click="ctrl.send();" type="button" class="btn btn-warning btn-flat">Send</button>
+                  </span>
+            </div>
+        </form>
+    </div><!-- /.box-footer-->
+</div><!--/.direct-chat -->

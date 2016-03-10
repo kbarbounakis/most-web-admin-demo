@@ -1,0 +1,17 @@
+<%# { "layout":"/views/shared/no-angular.html.ejs", "title":"Test MOST Client" } %>
+<div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Results</label>
+        <textarea class="form-control" style="font-family: sans-serif" id="result">
+        </textarea>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $.most().model("Group").where("name").equal("Administrators").selectCount("id").as("groupCount").first().done(function(result) {
+               $("#result").html(JSON.stringify(result));
+            }).fail(function(err) {
+                alert(err);
+            });
+        });
+    </script>
+</div>

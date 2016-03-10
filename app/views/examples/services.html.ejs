@@ -1,0 +1,16 @@
+<div ng-controller="ServiceExampleController as ctrl">
+    <div class="col-lg-12">
+        <h3>Services Examples</h3>
+        <select class="form-control" name="service" id="service" ng-model="service"
+                ng-options="service as service.description for service in ctrl.services">
+        </select>
+        <pre ng-if="ctrl.result" style="font-size:85%;margin-top:10px">{{service.url}}&nbsp;</pre>
+        <pre ng-if="ctrl.result" style="font-size:85%;overflow-y: auto;height: 360px">
+            {{ctrl.result | json}}
+        </pre>
+        <p class="pad">For more information about MOST Web Framework Data Services<br/>
+            <a target="_blank" href="https://docs.themost.io/most-web/module-most-web.controllers.HttpDataController.html">Visit most-data documentation home</a>
+        </p>
+    </div>
+    <div class="clearfix"></div>
+</div>

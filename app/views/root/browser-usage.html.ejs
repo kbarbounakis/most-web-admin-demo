@@ -1,0 +1,41 @@
+
+<div class="box box-default">
+    <div class="box-header with-border">
+    <h3 class="box-title">Browser Usage</h3>
+<div class="box-tools pull-right">
+    <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+<button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+</div>
+</div><!-- /.box-header -->
+<div class="box-body">
+    <div class="row">
+    <div class="col-md-8">
+    <div class="chart-responsive">
+        <most-data data-model="VisitorActivity"
+                   data-group="visitorBrowser/name"
+                   data-select="visitorBrowser/name as label, visitorBrowser/color as color, visitorBrowser/color as highlight,count(id) as value"
+                   data-name="visitsPerBrowser"></most-data>
+    <canvas class="pie-chart" data-source="visitsPerBrowser" id="pieChart" height="150"></canvas>
+    </div><!-- ./chart-responsive -->
+</div><!-- /.col -->
+<div class="col-md-4">
+    <most-data data-model="VisitorBrowser" data-name="browsers"></most-data>
+    <ul ng-if="browsers" class="chart-legend clearfix">
+    <li ng-repeat="browser in browsers"><i class="fa fa-circle-o" style="color:{{browser.color}}"></i> {{browser.name}}</li>
+</ul>
+</div><!-- /.col -->
+</div><!-- /.row -->
+</div><!-- /.box-body -->
+<div class="box-footer no-padding">
+    <most-data data-model="VisitorActivity"
+               data-group="visitorCountry/name"
+               data-select="visitorCountry/name as name,count(id) as visitCount"
+               data-order="count(id) desc"
+               data-top="3"
+               data-name="visits"></most-data>
+    <ul ng-if="visits" class="nav nav-pills nav-stacked">
+    <li ng-repeat="visit in visits"><a href="#">{{visit.name}} <span class="pull-right text-green">
+                <i class="fa fa-angle-up"></i> {{visit.visitCount || 0 }}</span></a></li>
+</ul>
+</div><!-- /.footer -->
+</div><!-- /.box -->

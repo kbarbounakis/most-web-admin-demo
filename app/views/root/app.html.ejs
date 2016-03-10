@@ -1,0 +1,31 @@
+<div ejs-app="server">
+    <!-- Info boxes -->
+    <div class="row">
+        <div ejs-include="/info-boxes.html"></div>
+    </div><!-- /.row -->
+    <!-- Main row -->
+    <div class="row">
+        <!-- Left col -->
+        <div class="col-md-8">
+            <div class="row">
+                <div class="col-md-6">
+                    <div ejs-include="/chat/direct.html"></div>
+                </div><!-- /.col -->
+                <div class="col-md-6">
+                    <!-- USERS LIST -->
+                    <div ejs-include="/user-list.html"></div>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+
+            <!-- TABLE: LATEST ORDERS -->
+            <div ejs-include="/latest-orders.html"></div>
+        </div><!-- /.col -->
+
+        <div class="col-md-4">
+            <!-- BROWSER LIST -->
+            <div ejs-include="/browser-usage.html"></div>
+            <!-- PRODUCT LIST -->
+            <div ejs-include="/product-list.html"></div>
+        </div><!-- /.col -->
+    </div><!-- /.row -->
+</div>
