@@ -1,9 +1,0 @@
-<%# { "layout":"/views/shared/master.html.ejs", "title":"Dashboard" } %>
-<div ng-controller="NewsController as newsCtrl">
-    <div>
-        <button class="md-button" ng-click="newsCtrl.clear()">Clear</button>
-    </div>
-    <div>
-        <pre>News:{{newsCtrl.news | json}}</pre>
-    </div>
-</div>

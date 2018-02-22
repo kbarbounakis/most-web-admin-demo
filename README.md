@@ -1,36 +1,27 @@
-# most-web-admin-demo
+# AngularCliTest
 
-![MOST Web Framework Logo](https://www.themost.io/assets/images/most_logo_sw_240.png)
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.9.
 
-A [MOST Web Framework](https://github.com/kbarbounakis/most-web) OMS demo application based on [Admin LTE](https://github.com/almasaeed2010/AdminLTE) template.
+## Development server
 
-### Installation
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-##### Clone git repository
+## Code scaffolding
 
-    git clone https://github.com/kbarbounakis/most-web-admin-demo.git
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-##### Install dependencies
+## Build
 
-    cd most-web-admin-demo
-    npm install
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
-##### Install phantomjs (optional)
+## Running unit tests
 
-Note: This demo application uses [node-html-pdf](https://github.com/marcbachmann/node-html-pdf) for generating pdf files for invoices. This module has a dependency on [phantomjs](https://github.com/ariya/phantomjs)
-You may need to install [phantomjs](https://github.com/ariya/phantomjs) first before use this feature.
-If you want to test invoice printing install phantomjs globally
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-    npm install -g phantomjs-prebuilt
+## Running end-to-end tests
 
-##### Install bower components
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-    cd app
-    bower install
+## Further help
 
-##### Run application
-
-    npm start
-
-
-
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
