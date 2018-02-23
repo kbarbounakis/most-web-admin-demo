@@ -1,6 +1,7 @@
 {
    "presets": [ "env" ],
     "plugins": [
+        "es6-promise",
         ["transform-es2015-modules-commonjs-simple", {
             "noMangle":true,
             "addExports":true

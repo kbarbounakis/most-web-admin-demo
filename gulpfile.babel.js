@@ -12,7 +12,8 @@ const buildDir = 'dist';
 
 const serverModules = [
     `${serverDir}/**/*.js`,
-    `${serverDir}/config/**/*`
+    `${serverDir}/config/**/*`,
+    `${serverDir}/views/**/*`
 ];
 
 const serverScript = `${buildDir}/${serverDir}/server.js`;
@@ -27,8 +28,8 @@ gulp.task('build:server', ['lint:server', 'copy:server'], () => {
 });
 
 gulp.task('copy:server', ()=> {
-    return gulp.src([`${serverDir}/config/**/*`])
-        .pipe(gulp.dest(`${buildDir}/${serverDir}/config`))
+    return gulp.src([`${serverDir}/config/**/*`, `${serverDir}/views/**/*`] , {base: `${serverDir}`})
+        .pipe(gulp.dest(`${buildDir}/${serverDir}`))
 });
 
 // lint server modules

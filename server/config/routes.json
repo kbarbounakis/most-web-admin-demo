@@ -1,5 +1,10 @@
 [
     {
+        "url": "/auth/:action?",
+        "controller": "auth",
+        "format": "html"
+    },
+    {
         "url": "/api/?",
         "controller": "service",
         "action": "index",
@@ -18,9 +23,15 @@
         "format": "json"
     },
     {
-        "url": "/api/:entitySet/:id/?",
+        "url": "/api/:entitySet/{id:int}/?",
         "controller": "service",
         "action": "item",
+        "format": "json"
+    },
+    {
+        "url": "/api/:entitySet/:entityAction(\\(\\))?",
+        "controller": "service",
+        "action": "entityAction",
         "format": "json"
     },
     {
