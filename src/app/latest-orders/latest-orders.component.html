@@ -1,0 +1,28 @@
+<div class="card">
+  <div class="card-header">
+    <i class="fa fa-align-justify"></i> Latest Orders
+  </div>
+  <div class="card-body">
+    <table class="table latest-orders" *ngIf="orders">
+      <thead>
+      <tr>
+        <th>Customer</th>
+        <th>Order Date</th>
+        <th>Ordered Item</th>
+        <th>Status</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let order of orders">
+        <td>{{order.customer.description}}</td>
+        <td>{{order.orderDate | date:'short'}}</td>
+        <td>{{order.orderedItem.name}}</td>
+        <td>
+          <span class="badge" [ngClass]="order.orderStatus.alternateName">{{order.orderStatus.name}}</span>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<div class="card">
+  <div class="card-header">
+    <i class="fa fa-align-justify"></i> Top Customers
+  </div>
+  <div class="card-body">
+    <table class="table" *ngIf="topCustomers">
+      <thead>
+      <tr>
+        <th>Customer</th>
+        <th>Address</th>
+        <th>Orders</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let topCustomer of topCustomers">
+        <td>{{topCustomer.customer.description}}</td>
+        <td>{{topCustomer.customer.address.streetAddress}} {{ topCustomer.customer.address.addressLocality }}</td>
+          <td class="text-center text-dark"><span class="badge badge-large badge-success">{{topCustomer.total}}</span></td>
+      </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>

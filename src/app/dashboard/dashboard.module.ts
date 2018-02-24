@@ -6,6 +6,7 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 import { CommonModule } from '@angular/common';
 import { LatestOrdersModule } from "../latest-orders/latest-orders.module";
 import {TopCustomersModule} from "../top-customers/top-customers.module";
+import { OrderMonthChartComponent } from './order-month-chart/order-month-chart.component';
 
 @NgModule({
   imports: [
@@ -16,6 +17,6 @@ import {TopCustomersModule} from "../top-customers/top-customers.module";
       TopCustomersModule,
       MostModule
   ],
-  declarations: [ DashboardComponent ]
+  declarations: [ DashboardComponent, OrderMonthChartComponent ]
 })
 export class DashboardModule { }

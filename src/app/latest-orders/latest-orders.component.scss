@@ -1,0 +1,41 @@
+@import "./../../scss/bootstrap/functions";
+@import "./../../scss/bootstrap/variables";
+
+.table.latest-orders {
+    thead {
+      th {
+        border-top:0;
+      }
+    }
+  }
+
+.badge.OrderDelivered {
+  color: #fff;
+  background-color: $blue;
+}
+
+.badge.OrderCancelled {
+  color: #fff;
+  background-color: $red;
+}
+
+.badge.OrderInTransit {
+  color: #fff;
+  background-color: $teal;
+}
+
+
+.badge.OrderPaymentDue {
+  color: #fff;
+  background-color: $yellow;
+}
+
+.badge.OrderPickup {
+  color: #fff;
+  background-color: $purple;
+}
+
+.badge.OrderProcessing {
+  color: #fff;
+  background-color: $orange;
+}
